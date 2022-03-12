@@ -23,7 +23,15 @@
                 </header>
                 <div class="code-content">
                     <code>
-                        <p class="line-1"><span class="c-y">.rect</span> <span>{</span></p><br><p class="line-2"><span class="c-p">background</span><span>:</span> <span class="c-y">linear-gradient</span>( </p><br><p class="line-3"><span class="c-o">-119deg</span>,</p><br><p class="line-4"><span class="c-y">$gray</span> <span class="c-o">0%</span>,</p><br><p class="line-5"><span class="c-y">$dark-gray</span> <span class="c-o">100%</span>);}</p>
+                        <p class="line-1"><span class="c-y">.skills</span>
+                            <span>{</span></p><br><p class="line-2">
+                                <span class="c-p" /><span>:</span>
+                                <span class="c-y">HTML , CSS , Javascript</span>( </p><br><p class="line-3">
+                            <span class="c-o">Vue.js & React Native</span>,</p><br><p class="line-4">
+                            <span class="c-y">Respsonsive Web</span> <span class="c-o">Design</span>
+                        </p><br><p class="line-5"><span class="c-y">Css Framworks :</span>
+                            <span class="c-o"> Bootstrap,</span></p>
+                        <p class="line-5"><span class="c-o">Vuetify</span>);}</p>
                     </code>
                 </div>
             </div>
@@ -73,7 +81,7 @@
 .code {
   position: absolute;
   width: 290px;
-  height: 170px;
+  height: 200px;
   background: #1D1E22;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
@@ -97,7 +105,7 @@
   }
   &-html {
     left: -100px;
-    top: 20px;
+    top: -10px;
   }
   &-css {
     left: -25px;
@@ -105,7 +113,7 @@
   }
   &-js {
     left: -175px;
-    top: 380px;
+    top: 410px;
   }
   .code-content {
     margin: 0 10px 10px;
@@ -140,7 +148,7 @@
         }
         &-1, &-3, &-4 {
           animation-duration: 1s;
-          animation-timing-function: steps(10, end);
+          animation-timing-function: steps(30, end);
         }
         &-5 {
           border-color: transparent;
@@ -151,7 +159,7 @@
         &-2 {
           margin-left: 2rem;
         }
-        &-3, &-4, &-5 {
+        &-3, &-4, &-5, &-5{
           margin-left: 4rem;
         }
       }
@@ -174,19 +182,23 @@
 }
 @keyframes typing-2 {
   from { width: 0 }
-  to { width: 220px }
+  to { width: 200px }
 }
 @keyframes typing-3 {
   from { width: 0 }
-  to { width: 70px }
+  to { width: 160px }
 }
 @keyframes typing-4 {
   from { width: 0 }
-  to { width: 75px }
+  to { width: 170px }
 }
 @keyframes typing-5 {
   from { width: 0 }
-  to { width: 141px }
+  to { width: 190px }
+}
+@keyframes typing-6 {
+  from { width: 0 }
+  to { width: 270px }
 }
 
 
