@@ -1,21 +1,16 @@
 <template>
-    <span>
-        <v-system-bar color="deep-purple darken-3" />
-
+    <div>
         <v-app-bar
-            color="deep-purple accent-4"
+            color="accent-4"
             dark
-            prominent
         >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-
-            <v-toolbar-title>My files</v-toolbar-title>
-
+            
             <v-spacer />
 
-            <v-btn icon>
-                <v-icon>mdi-magnify</v-icon>
-            </v-btn>
+            <a href="https://github.com/pateras95" target="_blank" >
+                <button class="github-button"/>
+            </a>
 
             <v-btn icon>
                 <v-icon>mdi-filter</v-icon>
@@ -62,7 +57,7 @@
         <v-card-text>
             The navigation drawer will appear from the bottom on smaller size screens.
         </v-card-text>
-    </span>
+    </div>
 </template>
 
 <script>
@@ -80,3 +75,15 @@
         },
     }
 </script>
+
+<style scoped>
+.github-button{
+    background: url("../assets/images/github-box.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    font-weight: bold;
+    height: 32px;
+    padding-bottom: 2px;
+    width: 75px;
+}
+
+</style>

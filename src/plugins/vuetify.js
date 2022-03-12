@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib/framework'
+import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(Vuetify, {
     options: {
@@ -33,5 +34,8 @@ export default new Vuetify({
                 background: "#121212"
             }
         }
+    },
+    icons: {
+        iconfont: 'mdi', // 'mdi' //|| 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
     }
 })
