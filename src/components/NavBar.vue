@@ -8,17 +8,13 @@
             
             <v-spacer />
 
-            <a href="https://github.com/pateras95" target="_blank" >
-                <button class="github-button"/>
+            <a href="https://github.com/pateras95" target="_blank">
+                <button class="github-button" />
             </a>
 
-            <v-btn icon>
-                <v-icon>mdi-filter</v-icon>
-            </v-btn>
-
-            <v-btn icon>
-                <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
+            <a href="https://github.com/pateras95" target="_blank">
+                <button class="linkedin-button" />
+            </a>
         </v-app-bar>
 
         <v-navigation-drawer
@@ -53,10 +49,6 @@
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
-
-        <v-card-text>
-            The navigation drawer will appear from the bottom on smaller size screens.
-        </v-card-text>
     </div>
 </template>
 
@@ -65,14 +57,9 @@
         name: "NavBar",
         data() {
             return {
-                drawer: null,
+                drawer: false,
             }
-        },
-        watch: {
-            drawer: function(val) {
-                this.$vuetify.goTo(val ? 'top' : 'bottom')
-            }
-        },
+        }
     }
 </script>
 
@@ -82,7 +69,14 @@
     cursor: pointer;
     font-weight: bold;
     height: 32px;
-    padding-bottom: 2px;
+    width: 75px;
+}
+
+.linkedin-button{
+    background: url("../assets/images/linkedin.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    font-weight: bold;
+    height: 32px;
     width: 75px;
 }
 
