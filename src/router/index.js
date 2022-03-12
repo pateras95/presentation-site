@@ -11,7 +11,12 @@ const router = new VueRouter({
         path: '/',
         name: 'Home',
         component: Home
-    }, ]
+    }, {
+        path: '/about-me',
+        name: 'About Me',
+        component: () =>
+            import ('@/components/routes/AboutMeRoute.vue')
+    }]
 })
 
 router.beforeEach((to, from, next) => {

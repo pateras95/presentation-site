@@ -31,7 +31,7 @@
                             <span class="c-y">Respsonsive Web</span> <span class="c-o">Design</span>
                         </p><br><p class="line-5"><span class="c-y">Css Framworks :</span>
                             <span class="c-o"> Bootstrap,</span></p>
-                        <p class="line-5"><span class="c-o">Vuetify</span>);}</p>
+                        <p class="line-6"><span class="c-o">Vuetify</span>);}</p>
                     </code>
                 </div>
             </div>
@@ -43,9 +43,14 @@
                 </header>
                 <div class="code-content">
                     <code>
-                        <span class="c-y">var</span> <span class="c-b">colors</span> = [<span class="c-g">“#74B087”</span>, <span class="c-g">“#DE7300”</span>, <span class="c-g">“#74B087”</span>];<br><br>
-                        <span class="c-c">// Do the thing</span><br>
-                        <span class="c-y">function</span> <span class="c-b">animate</span>() {}
+                        <span class="c-y">other</span> <span class="c-b">Skills</span> = [
+                        <span class="c-g">“Java Spring (Rest API)”</span>,
+                        <span class="c-g">“Git”</span>,
+                        <span class="c-g">“MySQL”</span>,
+                        <span class="c-g">“Node.js”</span>,
+                        <span class="c-g">“Nuxt.js”</span>];<br><br>
+                        <span class="c-c">“Learn more about me (Click Above)”</span><br>
+                        <span class="c-y">function</span> <span class="c-b click-resume" @click="goToResume()">goToMyResume</span>() {}
                     </code>
                 </div>
             </div>
@@ -57,10 +62,20 @@
 <script>
     export default {
         name: "Home",
+        methods:{
+            goToResume(){
+                this.$router.push('/about-me')
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
+
+.click-resume{
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 .wrapper {
   height: 100vh;
@@ -129,7 +144,7 @@
   &-css {
     .code-content code {
       .line {
-        @for $i from 1 through 5 {
+        @for $i from 1 through 6 {
           &-#{$i} {
             width: 0%;
             margin: 0;
@@ -154,12 +169,18 @@
           border-color: transparent;
           animation:
             typing-5 3s 12s steps(30, end) forwards,
+            // cursor-persist 1s linear 12s infinite;
+        }
+        &-6 {
+          border-color: transparent;
+          animation:
+            typing-6 3s 12s steps(30, end) forwards,
             cursor-persist 1s linear 12s infinite;
         }
         &-2 {
           margin-left: 2rem;
         }
-        &-3, &-4, &-5, &-5{
+        &-3, &-4, &-5, &-6{
           margin-left: 4rem;
         }
       }
@@ -194,11 +215,11 @@
 }
 @keyframes typing-5 {
   from { width: 0 }
-  to { width: 190px }
+  to { width: 195px }
 }
 @keyframes typing-6 {
   from { width: 0 }
-  to { width: 270px }
+  to { width: 70px }
 }
 
 
