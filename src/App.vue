@@ -12,13 +12,6 @@
 
     export default {
         name: "App",
-        components: { NavBar },
-        data: () => ({
-            //
-        })
+        components: { NavBar }
     }
 </script>
-
-<style>
-
-</style>

@@ -9,6 +9,3 @@
         name: "AboutMe"
     }
 </script>
-
-<style scoped>
-</style>
