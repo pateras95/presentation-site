@@ -29,23 +29,23 @@
 </script>
 
 <style scoped>
- .container{
+.container{
     margin-top: 30px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
- }
+}
  
- .about-me-container{
+.about-me-container{
     width: 500px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 17px;
- }
+}
 
- .header-text{
+.header-text{
     font-size: 25px;
     font-weight: 700;
- }
+}
 
 
 </style>
