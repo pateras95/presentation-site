@@ -1,5 +1,8 @@
 <template>
     <div class="wrapper">
+        <div class="typewriter">
+            <h1>Hi there, I am Konstantinos Kalyvas </h1>
+        </div>
         <div class="illustration-editor">
             <div class="code-blocks">
                 <div class="code code-html">
@@ -10,7 +13,9 @@
                     </header>
                     <div class="code-content">
                         <code>
-                            <span class="c-r">&lt;div</span> <span class="c-y">class</span><span class="c-w">=</span><span class="c-g">"rect"</span><span class="c-r">&gt;&lt;/div&gt;</span>
+                            <span class="c-r">&lt;div</span> <span class="c-y">class</span><span class="c-w">=</span><span class="c-g">"work"</span><span class="c-y">
+                                <span class="c-r">&gt;</span> Currently working at <a href="https://mpass.gr/" target="_blank">Mpass</a> as a Front End Developer.
+                                You can find more about me on next pages. Thnx for visiting my site<span class="c-r"> &lt;/div&gt;</span></span>
                         </code>
                     </div>
                 </div>
@@ -72,121 +77,146 @@
 
 <style lang="scss" scoped>
 
-// .click-resume{
-//     cursor: pointer;
-//     text-decoration: underline;
-// }
+.click-resume{
+    cursor: pointer;
+    text-decoration: underline;
+}
 
-// .wrapper {
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
 
-// .illustration-editor {
-//     margin-top: -2rem;
-//     margin-right: -10rem;
-//     display: grid;
-//     grid-template-rows: 24px auto;
-//     justify-items: center;
-//     position: relative;
-// }
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
 
-// .code {
-//     position: absolute;
-//     width: 290px;
-//     height: 200px;
-//     background: #1D1E22;
-//     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
-//     border-radius: 6px;
-//     z-index: 5;
-//     header {
-//         display: grid;
-//         grid-template-columns: 36px auto 36px;
-//         align-items: center;
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.wrapper {
+    margin-top: 4rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.illustration-editor {
     
-//         svg {
-//             margin: 10px;
-//         }
-//         h1 {
-//             font-family: Lato, sans-serif;
-//             font-weight: 900;
-//             font-size: 14px;
-//             letter-spacing: 1.57px;
-//             color: #C5C8D4;
-//             margin: 0;
-//         }
-//     }
-//     &-html {
-//         left: -100px;
-//         top: -10px;
-//     }
-//     &-css {
-//         left: -25px;
-//         top: 200px;
-//     }
-//     &-js {
-//         left: -175px;
-//         top: 410px;
-//     }
-//     .code-content {
-//         margin: 0 10px 10px;
-//         color: white;
-//         .c-r { color: #A88038 }
-//         .c-o { color: #DE7300 }
-//         .c-y { color: #E1CA72 }
-//         .c-g { color: #74B087 }
-//         .c-p { color: #9F8198 }
-//         .c-b { color: #7A99AD }
-//         .c-c { color: #666666 }
-//     }
-//     &-css {
-//         .code-content code {
-//             .line {
-//                 @for $i from 1 through 6 {
-//                     &-#{$i} {
-//                         width: 0%;
-//                         margin: 0;
-//                         border-right: .15em solid transparent;
-//                         overflow: hidden;
-//                         display: inline-block;
-//                         white-space: nowrap;
-//                     }
-//                 }
-//                 @for $i from 1 through 4 {
-//                     &-#{$i} {
-//                         animation:
-//                             typing-#{$i} 3s unquote((($i - 1) * 3) + 's') steps(30, end) forwards,
-//                             cursor 1s linear unquote((($i - 1) * 3) + 's') 3;
-//                     }
-//                 }
-//                 &-1, &-3, &-4 {
-//                     animation-duration: 1s;
-//                     animation-timing-function: steps(30, end);
-//                 }
-//                 &-5 {
-//                     border-color: transparent;
-//                     animation:
-//             typing-5 3s 12s steps(30, end) forwards,
-//                     // cursor-persist 1s linear 12s infinite;
-//                 }
-//                 &-6 {
-//                     border-color: transparent;
-//                     animation:
-//                         typing-6 3s 12s steps(30, end) forwards,
-//                         cursor-persist 1s linear 12s infinite;
-//                 }
-//                 &-2 {
-//                     margin-left: 2rem;
-//                 }
-//                 &-3, &-4, &-5, &-6{
-//                     margin-left: 4rem;
-//                 }
-//             }
-//         }
-//     }
-// }
+    margin-top: 4rem;
+    margin-right: -10rem;
+    display: grid;
+    grid-template-rows: 24px auto;
+    justify-items: center;
+    position: relative;
+}
+
+.code {
+    position: absolute;
+    width: 290px;
+    height: 200px;
+    background: #1D1E22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    z-index: 5;
+    header {
+        display: grid;
+        grid-template-columns: 36px auto 36px;
+        align-items: center;
+    
+        svg {
+            margin: 10px;
+        }
+        h1 {
+            font-family: Lato, sans-serif;
+            font-weight: 900;
+            font-size: 14px;
+            letter-spacing: 1.57px;
+            color: #C5C8D4;
+            margin: 0;
+        }
+    }
+    &-html {
+        left: -100px;
+        top: -10px;
+    }
+    // &-css {
+    //     left: -25px;
+    //     top: 200px;
+    // }
+    &-js {
+        left: -175px;
+        top: 410px;
+    }
+    .code-content {
+        margin: 0 10px 10px;
+        color: white;
+        .c-r { color: #A88038 }
+        .c-o { color: #DE7300 }
+        .c-y { color: #E1CA72 }
+        .c-g { color: #74B087 }
+        .c-p { color: #9F8198 }
+        .c-b { color: #7A99AD }
+        .c-c { color: #666666 }
+    }
+    &-css {
+        .code-content code {
+            .line {
+                // @for $i from 1 through 6 {
+                //     &-#{$i} {
+                //         width: 0%;
+                //         margin: 0;
+                //         border-right: .15em solid transparent;
+                //         overflow: hidden;
+                //         display: inline-block;
+                //         white-space: nowrap;
+                //     }
+                // }
+                // @for $i from 1 through 4 {
+                //     &-#{$i} {
+                //         animation:
+                //             typing-#{$i} 3s unquote((($i - 1) * 3) + 's') steps(30, end) forwards,
+                //             cursor 1s linear unquote((($i - 1) * 3) + 's') 3;
+                //     }
+                // }
+                &-1, &-3, &-4 {
+                    animation-duration: 1s;
+                    animation-timing-function: steps(30, end);
+                }
+                &-5 {
+                    border-color: transparent;
+                    animation:
+            typing-5 3s 12s steps(30, end) forwards,
+                    // cursor-persist 1s linear 12s infinite;
+                }
+                &-6 {
+                    border-color: transparent;
+                    animation:
+                        typing-6 3s 12s steps(30, end) forwards,
+                        cursor-persist 1s linear 12s infinite;
+                }
+                &-2 {
+                    margin-left: 2rem;
+                }
+                &-3, &-4, &-5, &-6{
+                    margin-left: 4rem;
+                }
+            }
+        }
+    }
+}
 
 .editor-block {
     position: relative;
@@ -197,42 +227,42 @@
     border-radius: 10px;
 }
 
-// @keyframes typing-1 {
-//     from { width: 0 }
-//     to { width: 60px }
-// }
-// @keyframes typing-2 {
-//     from { width: 0 }
-//     to { width: 200px }
-// }
-// @keyframes typing-3 {
-//     from { width: 0 }
-//     to { width: 160px }
-// }
-// @keyframes typing-4 {
-//     from { width: 0 }
-//     to { width: 170px }
-// }
-// @keyframes typing-5 {
-//     from { width: 0 }
-//     to { width: 195px }
-// }
-// @keyframes typing-6 {
-//     from { width: 0 }
-//     to { width: 70px }
-// }
+@keyframes typing-1 {
+    from { width: 0 }
+    to { width: 60px }
+}
+@keyframes typing-2 {
+    from { width: 0 }
+    to { width: 200px }
+}
+@keyframes typing-3 {
+    from { width: 0 }
+    to { width: 160px }
+}
+@keyframes typing-4 {
+    from { width: 0 }
+    to { width: 170px }
+}
+@keyframes typing-5 {
+    from { width: 0 }
+    to { width: 195px }
+}
+@keyframes typing-6 {
+    from { width: 0 }
+    to { width: 70px }
+}
 
 
-// @keyframes cursor {
-//     from, to, 20%, 80% { border-color: transparent }
-//     25%, 75% { border-color: white }
-// }
+@keyframes cursor {
+    from, to, 20%, 80% { border-color: transparent }
+    25%, 75% { border-color: white }
+}
 
-// @keyframes cursor-persist {
-//     from, 45% { border-color: transparent }
-//     50%, to { border-color: white }
-// }
+@keyframes cursor-persist {
+    from, 45% { border-color: transparent }
+    50%, to { border-color: white }
+}
 
-</style>>
+</style>
 
 
