@@ -20,7 +20,6 @@
         <v-navigation-drawer
             v-model="drawer"
             absolute
-            bottom
             temporary
         >
             <template v-slot:prepend>
@@ -42,27 +41,28 @@
             >
                 <v-list-item-group
                     v-model="group"
-                    active-class="deep-purple--text text--accent-4"
+                    active-class="text--accent-4 nav-bar"
                 >
                     <router-link to="/" style="text-decoration: none; color: inherit;">
-                        <v-list-item>
-                            <v-list-item-icon>
-                                <v-icon>mdi-folder</v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-title>My Files</v-list-item-title>
+                        <v-list-item class="nav-bar-text">
+                            <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>Home</v-list-item-title>
                         </v-list-item>
                     </router-link>
-                    <v-list-item>
-                        <v-list-item-title>Bar</v-list-item-title>
-                    </v-list-item>
-
-                    <v-list-item>
-                        <v-list-item-title>Fizz</v-list-item-title>
-                    </v-list-item>
-
-                    <v-list-item>
-                        <v-list-item-title>Buzz</v-list-item-title>
-                    </v-list-item>
+                    <router-link to="/" style="text-decoration: none; color: inherit;">
+                        <v-list-item class="nav-bar-text">
+                            <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>About Me</v-list-item-title>
+                        </v-list-item>
+                    </router-link>
+                    <router-link to="/" style="text-decoration: none; color: inherit;">
+                        <v-list-item class="nav-bar-text">
+                            <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>Resume</v-list-item-title>
+                        </v-list-item>
+                    </router-link>
+                    <router-link to="/" style="text-decoration: none; color: inherit;">
+                        <v-list-item class="nav-bar-text">
+                            <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>Data Visualization</v-list-item-title>
+                        </v-list-item>
+                    </router-link>
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
@@ -102,13 +102,19 @@
     width: 75px;
 }
 
+.nav-bar-text {
+    margin-left: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+
 .nav-top-container{
     margin-top: 15px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    font-weight: 00;
+    font-weight: 400;
     font-size: 17px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
