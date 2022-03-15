@@ -39,16 +39,19 @@
 
             <v-list
                 nav
-                dense
             >
                 <v-list-item-group
                     v-model="group"
                     active-class="deep-purple--text text--accent-4"
                 >
-                    <v-list-item>
-                        <v-list-item-title>Foo</v-list-item-title>
-                    </v-list-item>
-
+                    <router-link to="/" style="text-decoration: none; color: inherit;">
+                        <v-list-item>
+                            <v-list-item-icon>
+                                <v-icon>mdi-folder</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-title>My Files</v-list-item-title>
+                        </v-list-item>
+                    </router-link>
                     <v-list-item>
                         <v-list-item-title>Bar</v-list-item-title>
                     </v-list-item>
