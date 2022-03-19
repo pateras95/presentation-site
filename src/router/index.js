@@ -16,7 +16,14 @@ const router = new VueRouter({
         name: 'AboutMe',
         component: () =>
             import ('@/components/routes/AboutMeRoute.vue')
-    }]
+    },
+    {
+        path: '/data-visualization',
+        name: 'DataVisualization',
+        component: () =>
+            import ('@/components/routes/DataVisualizationRoute.vue')
+    }
+    ]
 })
 
 router.beforeEach((to, from, next) => {
