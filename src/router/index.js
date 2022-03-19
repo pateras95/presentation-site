@@ -22,6 +22,12 @@ const router = new VueRouter({
         name: 'DataVisualization',
         component: () =>
             import ('@/components/routes/DataVisualizationRoute.vue')
+    },
+    {
+        path: '/resume',
+        name: 'Resume',
+        component: () =>
+            import ('@/components/routes/ResumeRoute.vue')
     }
     ]
 })

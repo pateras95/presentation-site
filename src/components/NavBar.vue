@@ -53,12 +53,12 @@
                             <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>About Me</v-list-item-title>
                         </v-list-item>
                     </router-link>
-                    <router-link to="/data-visualization" style="text-decoration: none; color: inherit;">
+                    <router-link to="/resume" style="text-decoration: none; color: inherit;">
                         <v-list-item class="nav-bar-text">
                             <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>Resume</v-list-item-title>
                         </v-list-item>
                     </router-link>
-                    <router-link to="/" style="text-decoration: none; color: inherit;">
+                    <router-link to="/data-visualization" style="text-decoration: none; color: inherit;">
                         <v-list-item class="nav-bar-text">
                             <v-list-item-title><v-icon class="mr-5">mdi-folder</v-icon>Data Visualization</v-list-item-title>
                         </v-list-item>

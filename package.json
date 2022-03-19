@@ -15,6 +15,7 @@
         "moment": "^2.29.1",
         "vue": "^2.6.11",
         "vue-meta": "^2.4.0",
+        "vue-pdf": "^4.3.0",
         "vue-router": "^3.2.0",
         "vue-zoomer": "^0.3.10",
         "vuelidate": "^0.7.6",
