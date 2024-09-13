@@ -29,7 +29,7 @@
                     >
                         <img src="@/assets/images/me.jpg">
                     </v-avatar>
-                    <div class="mt-3">Konstanstinos</div>
+                    <div class="mt-3">Konstanstinos1</div>
                     <dir class="mt-n1">Kalyvas</dir>
                 </div>
             </template>
